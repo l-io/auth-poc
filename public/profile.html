@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Profile Page</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom Style -->
+    <style>
+      .gradient-custom {
+        /* fallback for old browsers */
+        background: #4c35cb;
+
+        /* Chrome 10-25, Safari 5.1-6 */
+        background: -webkit-linear-gradient(
+          to right bottom,
+          rgba(0, 95, 211, 1),
+          rgba(123, 137, 164, 1)
+        );
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        background: linear-gradient(
+          to right bottom,
+          rgb(0, 95, 211),
+          rgb(123, 137, 164)
+        );
+      }
+    </style>
+  </head>
+  <body>
+    <section class="vh-100" style="background-color: #f4f5f7">
+      <div class="container py-5 h-100">
+        <div class="row d-flex justify-content-center align-items-center h-100">
+          <div class="col col-lg-6 mb-4 mb-lg-0">
+            <div class="card mb-3" style="border-radius: 0.5rem">
+              <div class="row g-0">
+                <div
+                  class="col-md-4 gradient-custom text-center text-white"
+                  style="
+                    border-top-left-radius: 0.5rem;
+                    border-bottom-left-radius: 0.5rem;
+                  "
+                >
+                  <img
+                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                    alt="Avatar"
+                    class="img-fluid my-5"
+                    style="width: 80px"
+                  />
+                  <h5 id="name">Name</h5>
+                  <p>Web Designer</p>
+                  <i class="far fa-edit mb-5"></i>
+                </div>
+                <div class="col-md-8">
+                  <div class="card-body p-4">
+                    <h6>Information</h6>
+                    <hr class="mt-0 mb-4" />
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Email</h6>
+                        <p class="text-muted" id="email">info@example.com</p>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <h6>Password</h6>
+                        <p class="text-muted">******</p>
+                      </div>
+                    </div>
+                    <h6>Location</h6>
+                    <hr class="mt-0 mb-4" />
+                    <div class="row pt-1">
+                      <div class="col-6 mb-3">
+                        <h6>Recent</h6>
+                        <p id="location" class="text-muted">Lorem ipsum</p>
+                      </div>
+                    </div>
+                    <button class="w-100 btn btn-lg btn-primary" type="submit">
+                      Log out
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+    <script language="JavaScript">
+      var parameters = window.location.search.substring(1).split("&");
+
+      var temp = parameters[0].split("=");
+      l = unescape(temp[1]);
+      temp = parameters[1].split("=");
+      p = unescape(temp[1]);
+      document.getElementById("email").innerHTML = l;
+      document.getElementById("name").innerHTML = p;
+      console.log(l);
+    </script>
+    <script>
+      function recordData(data) {
+        document.getElementById("location").innerHTML = data.city;
+      }
+    </script>
+    <script src="https://ipinfo.io/json?callback=recordData"></script>
+  </body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SignUp Page</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor"
+      crossorigin="anonymous"
+    />
+
+    <!-- Custom Style -->
+    <link href="/css/custom.css" rel="stylesheet" />
+  </head>
+  <body class="text-center">
+    <main class="form-signin w-100 m-auto">
+      <form method="post" action="/">
+        <img class="mb-4 img-logo" src="assets/coffee-bean-logo.png" alt="" />
+        <h1 class="h3 mb-3 fw-normal">Please sign up</h1>
+
+        <div class="form-floating">
+          <input
+            name="email"
+            class="form-control"
+            type="email"
+            id="floatingInput"
+            placeholder="name@example.com"
+          />
+          <label for="floatingInput">Email address</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            name="name"
+            type="name"
+            class="form-control"
+            id="floatingInput"
+            placeholder="Name"
+            minlength="5"
+            maxlength="128"
+          />
+          <label for="floatingInput">Name</label>
+        </div>
+
+        <div class="form-floating">
+          <input
+            name="password"
+            type="password"
+            class="form-control"
+            id="floatingPassword"
+            placeholder="Password"
+            minlength="10"
+            maxlength="128"
+          />
+          <label for="floatingPassword">Password</label>
+        </div>
+
+        <button class="w-100 btn btn-lg btn-primary" type="submit">
+          Sign Up
+        </button>
+
+        <p class="mt-5 mb-3 text-muted">&copy; CoffeeBean Technology 2022</p>
+      </form>
+    </main>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
